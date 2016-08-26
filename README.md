@@ -1,4 +1,4 @@
-#Gravemind API service for Keystroke
+#Gravemind API service for Keystroke [![Build Status](https://travis-ci.org/superlinkx/gravemind2.svg?branch=master)](https://travis-ci.org/superlinkx/gravemind2)
 
 ## Getting Started
 You must have golang installed and configured for your system. See golang.org for details.
