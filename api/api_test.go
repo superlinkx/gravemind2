@@ -11,7 +11,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-var defaultOptionsContent = "application/json; charset=utf-8"
+var defaultContentType = "application/json; charset=utf-8"
 
 func TestMain(m *testing.M) {
 	gin.SetMode(gin.TestMode)
@@ -71,7 +71,7 @@ func TestGravemindOptions(t *testing.T) {
 
 	t.Log("Returned: ", w.Body)
 
-	if (w.Code != http.StatusOK) || !allowed || (w.Header().Get("Content-Type") != defaultOptionsContent) {
+	if (w.Code != http.StatusOK) || !allowed || (w.Header().Get("Content-Type") != defaultContentType) {
 		t.Fail()
 	}
 }
@@ -83,7 +83,7 @@ func TestV1Options(t *testing.T) {
 
 	t.Log("Returned: ", w.Body)
 
-	if (w.Code != http.StatusOK) || !allowed || (w.Header().Get("Content-Type") != defaultOptionsContent) {
+	if (w.Code != http.StatusOK) || !allowed || (w.Header().Get("Content-Type") != defaultContentType) {
 		t.Fail()
 	}
 }
