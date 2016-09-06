@@ -3,3 +3,5 @@
 .build
 .stage
 configs/gravemind-dev.json
+debug
+launch.json
