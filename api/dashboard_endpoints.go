@@ -133,23 +133,25 @@ func CustomDashOptions(c *gin.Context) {
 	})
 }
 
-// RetrieveCurrentDash gets dashboard for `current` route
-func RetrieveCurrentDash(c *gin.Context) {}
+// GetCurrentDash gets dashboard for `current` route
+func GetCurrentDash(c *gin.Context) {
 
-// RetrieveDailyDash gets dashboard for `daily` route
-func RetrieveDailyDash(c *gin.Context) {}
+}
 
-// RetrieveWeeklyDash gets dashboard for `weekly` route
-func RetrieveWeeklyDash(c *gin.Context) {}
+// GetDailyDash gets dashboard for `daily` route
+func GetDailyDash(c *gin.Context) {}
 
-// RetrieveMonthlyDash gets dashboard for `monthly` route
-func RetrieveMonthlyDash(c *gin.Context) {}
+// GetWeeklyDash gets dashboard for `weekly` route
+func GetWeeklyDash(c *gin.Context) {}
 
-// RetrieveYearlyDash gets dashboard for `yearly` route
-func RetrieveYearlyDash(c *gin.Context) {}
+// GetMonthlyDash gets dashboard for `monthly` route
+func GetMonthlyDash(c *gin.Context) {}
 
-// RetrieveCustomDash gets dashboard for `custom` route
-func RetrieveCustomDash(c *gin.Context) {}
+// GetYearlyDash gets dashboard for `yearly` route
+func GetYearlyDash(c *gin.Context) {}
+
+// GetCustomDash gets dashboard for `custom` route
+func GetCustomDash(c *gin.Context) {}
 
 // PostCurrentDash commits new dashboard data for `current` route
 func PostCurrentDash(c *gin.Context) {}

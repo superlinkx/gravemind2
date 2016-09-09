@@ -138,36 +138,98 @@ func TestCustomDashOptions(t *testing.T) {
 	}
 }
 
-func TestRetrieveCurrentDash(t *testing.T) {
-	w, _ := testHandler("/gravemind/v1/dashboard/currentt", RetrieveCurrentDash, "GET", nil)
+func TestGetCurrentDash(t *testing.T) {
+	w, _ := testHandler("/gravemind/v1/dashboard/current", GetCurrentDash, "GET", nil)
 
 	contentType := w.Header().Get("Content-Type")
 
-	if w.Code == http.StatusOK {
-		if contentType == defaultContentType {
-			//Check payload
-
-			if true {
-				return
-			}
-		}
+	if (w.Code != http.StatusOK) || w.Header().Get("Content-Type") != defaultContentType {
+		t.Log("Code: ", w.Code)
+		t.Log("Expected Content-Type: ", defaultContentType, " / Got Content-Type: ", contentType)
+		t.Fail()
 	}
-
-	t.Log("Code: ", w.Code)
-	t.Log("Expected Content-Type: ", defaultContentType, " / Got Content-Type: ", contentType)
-	t.Fail()
 }
 
-func TestRetrieveDailyDash(t *testing.T) {}
+func TestGetDailyDash(t *testing.T) {
+	w, _ := testHandler("/gravemind/v1/dashboard/daily", GetDailyDash, "GET", nil)
 
-func TestRetrieveWeeklyDash(t *testing.T) {}
+	contentType := w.Header().Get("Content-Type")
 
-func TestRetrieveMonthlyDash(t *testing.T) {}
+	if (w.Code != http.StatusOK) || w.Header().Get("Content-Type") != defaultContentType {
+		t.Log("Code: ", w.Code)
+		t.Log("Expected Content-Type: ", defaultContentType, " / Got Content-Type: ", contentType)
+		t.Fail()
+	}
+}
 
-func TestRetrieveYearlyDash(t *testing.T) {}
+func TestGetWeeklyDash(t *testing.T) {
+	w, _ := testHandler("/gravemind/v1/dashboard/weekly", GetWeeklyDash, "GET", nil)
 
-func TestRetrieveCustomDash(t *testing.T) {}
+	contentType := w.Header().Get("Content-Type")
 
-func TestPostCurrentDash(t *testing.T) {}
+	if (w.Code != http.StatusOK) || w.Header().Get("Content-Type") != defaultContentType {
+		t.Log("Code: ", w.Code)
+		t.Log("Expected Content-Type: ", defaultContentType, " / Got Content-Type: ", contentType)
+		t.Fail()
+	}
+}
 
-func TestPostDailyDash(t *testing.T) {}
+func TestGetMonthlyDash(t *testing.T) {
+	w, _ := testHandler("/gravemind/v1/dashboard/monthly", GetMonthlyDash, "GET", nil)
+
+	contentType := w.Header().Get("Content-Type")
+
+	if (w.Code != http.StatusOK) || w.Header().Get("Content-Type") != defaultContentType {
+		t.Log("Code: ", w.Code)
+		t.Log("Expected Content-Type: ", defaultContentType, " / Got Content-Type: ", contentType)
+		t.Fail()
+	}
+}
+
+func TestGetYearlyDash(t *testing.T) {
+	w, _ := testHandler("/gravemind/v1/dashboard/yearly", GetYearlyDash, "GET", nil)
+
+	contentType := w.Header().Get("Content-Type")
+
+	if (w.Code != http.StatusOK) || w.Header().Get("Content-Type") != defaultContentType {
+		t.Log("Code: ", w.Code)
+		t.Log("Expected Content-Type: ", defaultContentType, " / Got Content-Type: ", contentType)
+		t.Fail()
+	}
+}
+
+func TestGetCustomDash(t *testing.T) {
+	w, _ := testHandler("/gravemind/v1/dashboard/custom", GetCustomDash, "GET", nil)
+
+	contentType := w.Header().Get("Content-Type")
+
+	if (w.Code != http.StatusOK) || w.Header().Get("Content-Type") != defaultContentType {
+		t.Log("Code: ", w.Code)
+		t.Log("Expected Content-Type: ", defaultContentType, " / Got Content-Type: ", contentType)
+		t.Fail()
+	}
+}
+
+func TestPostCurrentDash(t *testing.T) {
+	w, _ := testHandler("/gravemind/v1/dashboard/current", PostCurrentDash, "GET", nil)
+
+	contentType := w.Header().Get("Content-Type")
+
+	if (w.Code != http.StatusOK) || w.Header().Get("Content-Type") != defaultContentType {
+		t.Log("Code: ", w.Code)
+		t.Log("Expected Content-Type: ", defaultContentType, " / Got Content-Type: ", contentType)
+		t.Fail()
+	}
+}
+
+func TestPostDailyDash(t *testing.T) {
+	w, _ := testHandler("/gravemind/v1/dashboard/daily", GetDailyDash, "GET", nil)
+
+	contentType := w.Header().Get("Content-Type")
+
+	if (w.Code != http.StatusOK) || w.Header().Get("Content-Type") != defaultContentType {
+		t.Log("Code: ", w.Code)
+		t.Log("Expected Content-Type: ", defaultContentType, " / Got Content-Type: ", contentType)
+		t.Fail()
+	}
+}
